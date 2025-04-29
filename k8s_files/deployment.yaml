@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kequcloud-app
+  labels:
+    app: kequcloud-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kequcloud-app
+  template:
+    metadata:
+      labels:
+        app: kequcloud-app
+    spec:
+      containers:
+      - name: pandacloud-container
+        image: 545009824010.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest
+        ports:
+        - containerPort: 3000
+...
