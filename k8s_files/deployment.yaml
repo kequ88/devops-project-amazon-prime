@@ -16,7 +16,7 @@ spec:
         app: kequcloud-app
     spec:
       containers:
-      - name: pandacloud-container
+      - name: kequcloud-container
         image: 545009824010.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest
         ports:
         - containerPort: 3000
